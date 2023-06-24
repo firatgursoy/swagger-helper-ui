@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0"
+      prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+fx:controller="com.gnosis.swaggerhelperui.SwaggerHelperController">
+    <children>
+
+        <AnchorPane minHeight="0.0" minWidth="0.0">
+            <children>
+                <VBox AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0"
+                      AnchorPane.topAnchor="0">
+                    <children>
+                        <HBox spacing="5.0" VBox.vgrow="ALWAYS">
+                            <children>
+                                <Label minHeight="28.0" minWidth="100.0" text="Swagger Url :" HBox.hgrow="ALWAYS">
+                                    <HBox.margin>
+                                        <Insets/>
+                                    </HBox.margin>
+                                </Label>
+                                <TextField fx:id="textField_swagger_url" minHeight="28.0" HBox.hgrow="ALWAYS" text="http://maf-mobile-services-maf-tst.apps.acptst.avivasa.com.tr/api/v2/api-docs"/>
+                            </children>
+                            <padding>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                            </padding>
+                            <VBox.margin>
+                                <Insets/>
+                            </VBox.margin>
+                        </HBox>
+                        <HBox spacing="5.0" VBox.vgrow="ALWAYS">
+                            <children>
+                                <Label minHeight="28.0" minWidth="100.0" text="Exclusion Filter :" HBox.hgrow="NEVER"/>
+                                <VBox HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <ListView fx:id="listView_exclusion_filters" VBox.vgrow="ALWAYS"/>
+                                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                                            <children>
+                                                <TextField fx:id="textField_exclusionFilter"
+                                                           promptText="contains expression" HBox.hgrow="ALWAYS"/>
+                                                <Button fx:id="button_exclude_pattern" mnemonicParsing="false"
+                                                        text="Exclude Pattern"/>
+                                            </children>
+                                            <padding>
+                                                <Insets top="5.0"/>
+                                            </padding>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                            </children>
+                            <padding>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                            </padding>
+                        </HBox>
+                        <HBox VBox.vgrow="ALWAYS">
+                            <children>
+                                <HBox alignment="CENTER_LEFT" HBox.hgrow="SOMETIMES">
+                                    <children>
+                                        <Label fx:id="label_app_status" text="Application started." HBox.hgrow="ALWAYS">
+                                            <HBox.margin>
+                                                <Insets/>
+                                            </HBox.margin>
+                                            <padding>
+                                                <Insets left="5.0"/>
+                                            </padding>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="TOP_RIGHT" spacing="5.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <Button fx:id="button_do" defaultButton="true" mnemonicParsing="false"
+                                                text="Get Swagger Data and Copy Excluded Result to Clipboard"
+                                                textFill="#4313b0"/>
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                                    </padding>
+                                </HBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+
+
+    </children>
+</VBox>
